@@ -12,9 +12,9 @@
 
 .nav-container {
   display: flex;
+  width: 80%;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
 }
 
 .global-header .main-navigation ul {
@@ -25,8 +25,8 @@
 }
 
 .contact-container {
-  min-width: 30%;
   display: flex;
+  width: 30%;
   justify-content: space-between;
   align-items: center;
 }
@@ -64,6 +64,12 @@ h6 {
   cursor: pointer;
 }
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .phone-number {
   color: var(--link-color);
   font-family: var(--text-font-family);
@@ -73,9 +79,11 @@ h6 {
   letter-spacing: 0.1em;
   text-decoration: none;
 }
+
 .phone-number:hover {
   color: var(--link-hover-color);
 }
+
 .button {
   color: var(--link-color);
   font-family: var(--text-font-family);
@@ -92,8 +100,12 @@ h6 {
 
 .button:hover {
   background-color: #fff;
-  color: var(--link-hover-color);
+  color: #ff6c00;
   border: 1px solid #fff;
+}
+
+.section {
+  padding: 130px 55px;
 }
 
 .prices-section {
@@ -101,19 +113,19 @@ h6 {
   background-color: #111319;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 130px 55px;
 }
 
 .heading-with-dash {
   display: flex;
   align-items: center;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 
 .heading-with-dash h3 {
   margin-left: 20px;
   text-transform: uppercase;
-  font-family: Open Sans;
+  font-family: var(--text-font-family);
   font-size: 11px;
   font-weight: 600;
   line-height: 15px;
@@ -131,10 +143,11 @@ h6 {
 
 .prices {
   display: flex;
-  margin-top: 46px;
+  margin: 50px 0;
 }
 
 .prices-list {
+  padding: 30px 40px;
   font-family: var(--text-font-family);
   font-size: 18px;
   font-weight: 400;
@@ -143,15 +156,33 @@ h6 {
   color: rgba(157, 164, 189, 1);
   list-style: none;
   flex-grow: 1;
+  background-image: linear-gradient(rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
 }
 
-.prices-list li{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.prices-list:hover {
+  background-image: linear-gradient(rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
+  cursor: pointer;
 }
 
-.prices-list .prices-dash {
-    height: 1px;
-    background: rgba(157, 164, 189, 0.12);
+.prices-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.prices-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.prices-list li .prices-dash {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+}
+
+.prices-list li .prices-dash {
+  margin-left: 6px;
+  margin-right: 6px;
 }
