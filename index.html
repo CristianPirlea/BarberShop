@@ -160,7 +160,7 @@
         </div>
 
         <div class="centered-container">
-          <button class="button">Book a Service</button>
+          <button data-modal-open class="button">Book a Service</button>
         </div>
       </section>
 
@@ -212,8 +212,16 @@
         <br />
         <span>Extreme Barber</span>
       </section>
-
-      <svg class="icon"><use href="./symbol-defs.svg#icon-instagram" /></svg>
     </main>
+
+    <!-- Book Service Modal -->
+    <div class="modal" data-modal>
+      <div class="modal-content">
+        <button class="close-btn" data-modal-close>&times;</button>
+        Continut modal
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
   </body>
 </html>
